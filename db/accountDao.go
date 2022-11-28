@@ -17,9 +17,12 @@ type AccountDao struct {
 	Description        sql.NullString `gorm:"column:description;type:text"`
 	Created            time.Time      `gorm:"column:created;autoCreateTime"`
 	Updated            time.Time      `gorm:"column:updated;autoUpdateTime"`
+	CreatedTimeStamp   int64          `gorm:"column:created_timestamp;"`
+	UpdatedTimeStamp   int64          `gorm:"column:updated_timestamp;"`
 	CreatedBy          int64          `gorm:"column:created_by"`
 	UpdatedBy          int64          `gorm:"column:updated_by"`
 	Archived           sql.NullTime   `gorm:"column:archived"`
+	Version            int32          `gorm:"column:version"`
 }
 
 type FinanceAccountDao struct {

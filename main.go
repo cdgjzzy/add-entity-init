@@ -27,8 +27,11 @@ func main() {
 		AccountName:        "Assets",
 		Created:            time.Now(),
 		Updated:            time.Now(),
+		CreatedTimeStamp:   time.Now().UnixMilli(),
+		UpdatedTimeStamp:   time.Now().UnixMilli(),
 		CreatedBy:          1,
 		UpdatedBy:          1,
+		Version:            1,
 	}
 	id := db.SaveAccount(*account)
 	financeAccount := &db.FinanceAccountDao{
