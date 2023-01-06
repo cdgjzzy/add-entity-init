@@ -23,7 +23,7 @@ func main() {
 		AccountType:        "ASSET",
 		OpeningBalance:     "0.00",
 		BaseOpeningBalance: "0.00",
-		AccountClass:       1,
+		AccountClass:       0,
 		AccountName:        "Assets",
 		Created:            time.Now(),
 		Updated:            time.Now(),
